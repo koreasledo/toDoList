@@ -1,0 +1,152 @@
+* { margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+
+body {
+  background-image: url("./image/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+}
+
+.container {
+  background-color: white;
+  height: 100%;
+  min-height: 100vh;
+  max-width:  800px;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header h1 {
+  padding: 0.5em;
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+.header span {
+  font-size: 1.1em;
+  padding: 2em;
+}
+
+.inputArea {
+  padding-left: 0.5em;
+  position: relative;
+}
+.inputArea input {
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  width: 70%;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.inputArea input:focus {
+  outline: none;
+  border-bottom: 3px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  transition: 0.5s;
+  border-radius: 0;
+  padding-top: 35px;
+}
+
+.inputArea input + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8f8f8f;
+  font-size: 14px;
+  top: 4px;
+  left: 20px;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.inputArea input:focus + label > span {
+  top: 0px;
+  color: #333;
+}
+
+.inputArea button {
+  border: none;
+  background-color: white;
+}
+.inputArea button:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.taskArea {
+  border: 1px solid #eee;
+  margin-top: 2em;
+}
+
+.taskTabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.taskTabs div {
+  padding: 1em;
+  cursor: pointer;
+}
+
+#underLine {
+  height: 4px;
+  background-color: gray;
+  position: absolute;
+  width: 50px;
+  left: 0px;
+  top: 52px;
+  padding: 0;
+  transition: 0.4s;
+}
+
+.taskBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  height: 3.5em;
+  padding-left: 1em;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  font-style: oblique;
+  background-color: rgb(236, 236, 236);
+  transition: 0.5s;
+}
+.buttonBox {
+  display: flex;
+  height: 100%;
+}
+
+.buttonBox button {
+  height: 100%;
+  width: 5em;
+  background-color: white;
+  border: none;
+  transition: 0.5s;
+}
+
+.backBtn {
+  color:gray;
+}
+
+.checkBtn {
+  color: #009c00;
+}
+
+.deleteBtn {
+  color: rgb(255, 0, 0);
+}
